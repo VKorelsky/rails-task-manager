@@ -1,0 +1,46 @@
+<div class="container">
+  <h1>Your tasks</h1>
+
+  <ul>
+    <% @tasks.each do |task|%>
+      <div class="task-item">
+        <li>
+        <%= task.id %>)
+        <em><%= task.name.capitalize %></em><br>
+        --> done:
+        <strong><%= task.done %></strong>
+        </li>
+
+       <div class="button-container">
+          <%= link_to "Show More", task_path(task), class: "btn btn-primary" %>
+
+          <%= link_to task_path(task), method: :delete, class: "btn btn-danger nuke-link" do %>
+            <% image_tag ("nuke.png"), id: "nuke-btn" %>
+          <% end -%>
+
+        </div>
+      </div>
+
+    <% end %>
+  </ul>
+
+      <div id="blanket" style="display:none"></div>
+      <div id="popUpDiv" style="display:none">
+      <a href="#" onclick="popup('popUpDiv')" >Click to Close CSS Pop Up</a>
+      </div>
+      <a href="#" onclick="popup('popUpDiv')">Click to Open CSS Pop Up</a>
+
+  <%= link_to "Add a new task", new_task_path, class: "btn btn-primary" %>
+</div>
+
+
+
+<script>
+  $('#nuke-btn').magnificPopup({
+    items: {
+      src: 'http://frankiesmileshow.leafo.net/Stuff/NukeBlast.gif'
+    },
+    type: 'image' // this is default type
+});
+</script>
+

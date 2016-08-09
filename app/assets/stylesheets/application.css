@@ -12,4 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require magnific-popup
  */
+body {
+  font-family: 'Open Sans' !important;
+  background-size: cover;
+}

@@ -1,0 +1,42 @@
+// Place all the styles related to the Task controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.button-container{
+  display: flex;
+  justify-content: space-between;
+  width: 169px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.text-input{
+  margin-top: 40px;
+}
+
+.nuke-link {
+  margin-left: 10px;
+  img {
+    width: 50px;
+  }
+}
+
+#blanket {
+background-color:#111;
+opacity: 0.65;
+*background:none;
+position:absolute;
+z-index: 9001;
+top:0px;
+left:0px;
+width:100%;
+}
+
+#popUpDiv {
+position:absolute;
+background:url(pop-back.jpg) no-repeat;
+width:400px;
+height:400px;
+border:5px solid #000;
+z-index: 9002;
+}

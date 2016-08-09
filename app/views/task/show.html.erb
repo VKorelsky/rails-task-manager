@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Task n°<%= @task.id %> </h2>
+
+  <p>
+    <em><%= @task.name %></em>
+    <br>
+    Done : <strong><%= @task.done %></strong>
+  </p>
+
+  <%= link_to "Edit", edit_task_path(@task), class: "btn btn-primary" %>
+
+</div>

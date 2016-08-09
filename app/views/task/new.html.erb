@@ -1,0 +1,5 @@
+<h2>What do you have to do ?</h2>
+<%= form_for(@task) do |f| %>
+  Task Name: <%= f.text_field :name%> <br>
+  <%= f.submit "Create" %>
+<% end %>

@@ -1,0 +1,15 @@
+<div class="container">
+
+  <%= form_for @task, :html => {:class =>"padded"} do |f|%>
+      <div class="text-input">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      </div> <br>
+
+      <div class="check">
+      Done ? <%= f.check_box :done %>
+      </div> <br>
+
+      <%= f.submit "Edit", :class => "btn btn-primary" %>
+  <% end %>
+</div>
